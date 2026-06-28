@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gitandgithubcourse/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -42,7 +43,11 @@ class _LoginButton extends StatelessWidget {
           elevation: 1,
           backgroundColor: Colors.brown.withValues(alpha: 0.2),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+          );
+        },
         child: Text(
           'Save',
           style: TextStyle(fontSize: 24, color: Colors.white),
